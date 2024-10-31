@@ -193,7 +193,7 @@
                     miNodoBoton.classList.add('btn', 'btn-primary');
                     miNodoBoton.textContent = 'Agregar';
                     miNodoBoton.setAttribute('marcador', info.id);
-                    
+                    miNodoBoton.addEventListener('click', anadirProductoAlCarrito);
 
                     //insertamos
                     miNodoCardBody.appendChild(miNodoImagen);
@@ -204,6 +204,24 @@
                     DOMitems.appendChild(miNodo);
                 });
                }
+               /**
+          * Evento para añadir un producto al carrito de la compra
+          */
+          function anadirProductoAlCarrito(evento) {
+              // Anyadimos el Nodo a nuestro carrito
+              carrito.push(evento.target.getAttribute('marcador'))
+              // Actualizamos el carrito
+              renderizarCarrito();
+              // Actualizamos el LocalStorage
+                guardarCarritoEnLocalStorage();
+
+                handleCarritoValue(carrito.length)
+
+          }
+          function handleCarritoValue(value) {
+            const carritoContainer = document.getElementById("carrito-value");
+            carritoContainer.textContent =  `${value}`
+          }
 
                //dibujar todos los productos guardados en el carrito
                function renderizarCarrito(){
@@ -231,7 +249,9 @@
                     //mezclamos nodos
                     miNodo.appendChild(miBoton);
                     DOMcarrito.appendChild(miNodo);
-                });               
+                }); 
+                // Renderizamos el precio total en el HTML
+                DOMtotal.textContent = calcularTotal();              
             }
             renderizarProductos();
             renderizarCarrito();
