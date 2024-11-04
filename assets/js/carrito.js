@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 2,
             nombre: 'Sombrero vueltiao-machiembriao',
             precio: 150000,
-            imagen: 'assets/img/feature_prod_08.jpg',
+            imagen: 'assets/img/sombrero4.jpg',
             categoria: 'sombreros'
         },
         {
