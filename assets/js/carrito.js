@@ -128,12 +128,17 @@ carritoSinDuplicados.forEach((item) => {
 * Evento para borrar un elemento del carrito
 */
 function borrarItemCarrito(evento) {
+
 // Obtenemos el producto ID que hay en el boton pulsado
 const id = evento.target.dataset.item;
 // Borramos todos los productos
 carrito = carrito.filter((carritoId) => {
   return carritoId !== id;
 });
+renderizarCarrito();
+handleCarritoValue(carrito.length);
+
+}
 //calcular total
 function calculartTotal(){
     return carrito.reduce((total, item)=>{
@@ -147,6 +152,7 @@ function calculartTotal(){
 function vaciarCarrito(){
     carrito =[];
     renderizarCarrito();
+    localStorage.clear();
 
 }
 //contador de visitas
