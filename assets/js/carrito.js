@@ -7,19 +7,29 @@ document.addEventListener('DOMContentLoaded',() =>{
             id:1,
             nombre: 'Sombrero vueltiao, hecho a mano, 23 vueltas',
             precio: 250000,
-            imagen: 'assets/img/feature_prod_02.jpg'
+            imagen: 'assets/img/feature_prod_02.jpg',
+            categoria: 'Sombreros'
         },
         {
             id:3,
             nombre: 'Sombrero vueltiao',
             precio: 350000,
-            imagen: 'assets/img/feature_prod_02.jpg'
+            imagen: 'assets/img/feature_prod_02.jpg',
+            categoria: 'Sombreros'
         },
         {
             id:2,
             nombre: 'Mochilas wayuu',
             precio: 50000,
-            imagen: 'assets/img/feature_prod_03.jpg'
+            imagen: 'assets/img/feature_prod_03.jpg',
+            categoria: 'Sombreros'
+        },
+        {
+            id:4,
+            nombre: 'Bolso ficque',
+            precio: 120000,
+            imagen: 'assets/img/shop_03.jpg',
+            categoria: 'Bolsos'
         }
     ];
     let carrito = [];
@@ -78,10 +88,7 @@ function anadirProductoAlCarrito(evento) {
 carrito.push(evento.target.getAttribute('marcador'))
 // Actualizamos el carrito
 renderizarCarrito();
-
-
 handleCarritoValue(carrito.length)
-
 }
 //mostrar cantidadb de productos en el carrito
 function handleCarritoValue(value) {
@@ -153,7 +160,6 @@ function vaciarCarrito(){
     carrito =[];
     renderizarCarrito();
     localStorage.clear();
-
 }
 //contador de visitas
 let visitas = localStorage.getItem('contadorVisitas');
