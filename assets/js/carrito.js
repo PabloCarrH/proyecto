@@ -134,19 +134,19 @@ carrito = carrito.filter((carritoId) => {
   return carritoId !== id;
 });
 //calcular total
-function calculatTotal(){
+function calculartTotal(){
     return carrito.reduce((total, item)=>{
         const miItem=baseDeDatos.filter((itemBaseDatos)=>{
-            return itemBaseDatos.id ===parseInt(item);
+            return itemBaseDatos.id === parseInt(item);
         });
         return total + miItem[0].precio;
-    },0).toFixed(2);
+    }, 0).toFixed(2);
 }
 //vaciar carrito
 function vaciarCarrito(){
     carrito =[];
     renderizarCarrito();
-    
+
 }
 
 
