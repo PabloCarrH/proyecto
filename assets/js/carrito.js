@@ -142,7 +142,12 @@ function calculatTotal(){
         return total + miItem[0].precio;
     },0).toFixed(2);
 }
-
+//vaciar carrito
+function vaciarCarrito(){
+    carrito =[];
+    renderizarCarrito();
+    
+}
 
 
 // volvemos a renderizar
