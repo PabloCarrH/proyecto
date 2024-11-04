@@ -116,6 +116,7 @@ localStorage.setItem('contadorVisitas', visitas);
 
 // Muestra el contador en la página
 document.getElementById('contador').textContent = visitas;
+
     function anadirProductoAlCarrito(evento) {
         carrito.push(evento.target.getAttribute('marcador'));
         renderizarCarrito();
