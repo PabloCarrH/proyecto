@@ -178,7 +178,7 @@ renderizarCarrito();
 guardarCarritoEnLocalStorage();
 
 handleCarritoValue(carrito.length)
-}
+
 renderizarProductos();
 renderizarCarrito();
 });
