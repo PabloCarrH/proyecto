@@ -149,8 +149,16 @@ function vaciarCarrito(){
     renderizarCarrito();
 
 }
-
-
+//contador de visitas
+let visitas = localStorage.getItem('contadorVisitas');
+//contador
+if(!visitas){
+    visitas=0;
+}
+//incrmentar
+visitas++;
+//guardar local
+localStorage.setItem('contadorVisitas',visitas);
 
 // volvemos a renderizar
 renderizarCarrito();
