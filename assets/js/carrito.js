@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 6,
             nombre: 'Hamaca',
             precio: 120000,
-            imagen: 'assets/img/shop_01.jpg',
+            imagen: 'assets/img/category_img_02.jpg',
             categoria: 'hamacas'
         }
     ];
