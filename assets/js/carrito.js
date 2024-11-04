@@ -133,6 +133,18 @@ const id = evento.target.dataset.item;
 carrito = carrito.filter((carritoId) => {
   return carritoId !== id;
 });
+//calcular total
+function calculatTotal(){
+    return carrito.reduce((total, item)=>{
+        const miItem=baseDeDatos.filter((itemBaseDatos)=>{
+            return itemBaseDatos.id ===parseInt(item);
+        });
+        return total + miItem[0].precio;
+    },0).toFixed(2);
+}
+
+
+
 // volvemos a renderizar
 renderizarCarrito();
 // Actualizamos el LocalStorage
