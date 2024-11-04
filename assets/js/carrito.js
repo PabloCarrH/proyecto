@@ -83,6 +83,7 @@ renderizarCarrito();
 handleCarritoValue(carrito.length)
 
 }
+//mostrar cantidadb de productos en el carrito
 function handleCarritoValue(value) {
 const carritoContainer = document.getElementById("carrito-value");
 carritoContainer.textContent =  `${value}`
@@ -148,6 +149,7 @@ function vaciarCarrito(){
     renderizarCarrito();
 
 }
+
 
 
 // volvemos a renderizar
